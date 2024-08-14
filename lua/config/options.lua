@@ -3,4 +3,5 @@
 -- Add any additional options here
 vim.g.autoformat = false
 vim.lsp.inlay_hint.enable(false, { bufnr = nil })
+vim.opt.pumblend = 0
 

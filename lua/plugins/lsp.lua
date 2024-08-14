@@ -18,7 +18,7 @@ return {
   -- add tsserver and setup with typescript.nvim instead of lspconfig
   -- for typescript, LazyVim also includes extra specs to properly setup lspconfig,
   -- treesitter, mason and typescript.nvim. So instead of the above, you can use:
-  { import = "lazyvim.plugins.extras.lang.typescript" },
+  -- { import = "lazyvim.plugins.extras.lang.typescript" },
 
   {
     "nvim-treesitter/nvim-treesitter",
@@ -26,7 +26,6 @@ return {
       -- add tsx and treesitter
       vim.list_extend(opts.ensure_installed, {
         "tsx",
-        "typescript",
       })
     end,
   },
