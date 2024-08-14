@@ -22,7 +22,7 @@ return {
 
     local opts = {
       options = {
-        theme = "auto",
+        theme = "catppuccin",
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter" } },
       },
@@ -41,7 +41,7 @@ return {
               hint = icons.diagnostics.Hint,
             },
           },
-          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+          -- { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
           { LazyVim.lualine.pretty_path() },
         },
         lualine_x = {
@@ -89,10 +89,12 @@ return {
           },
         },
         lualine_y = {
+          { "filetype" }
+        },
+        lualine_z = {
           { "progress", separator = " ", padding = { left = 1, right = 0 } },
           { "location", padding = { left = 0, right = 1 } },
         },
-        lualine_z = {}
       },
       extensions = { "neo-tree", "lazy" },
     }
